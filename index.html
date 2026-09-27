@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <canvas id="particles" aria-hidden="true"></canvas>
 
   <!-- 顶部导航 -->
   <header class="nav">
@@ -25,19 +26,31 @@
 
   <!-- 首屏 -->
   <section class="hero" id="top">
-    <p class="eyebrow">AI 产品方向 · 个人作品集</p>
-    <h1 class="hero-name">李俊龙<span class="hero-en">（Joran）</span></h1>
-    <h2 class="hero-title">从空间到智能系统，<br>把复杂问题转化为可用的产品。</h2>
-    <p class="hero-sub">我是李俊龙，重庆大学城乡规划硕士生，正在将系统拆解、实地调研与方案推演的训练，迁移到 AI 产品的设计、搭建与评估中。我关注真实需求，也喜欢动手做出原型，让想法进入可以体验、可以验证的阶段。</p>
-    <p class="hero-id">重庆大学 · 城乡规划硕士生 · 2028 届 · AI 产品方向</p>
-    <p class="hero-tags">
-      <span>AI 产品</span><span>Agent 设计</span><span>产品评估</span><span>多模态探索</span><span>Vibe Coding</span>
-    </p>
-    <p class="hero-links">
-      <a class="btn btn-primary" href="#projects">查看项目</a>
-      <a class="btn btn-ghost" href="#contact">联系我</a>
-      <a class="hero-gh" href="https://github.com/LeeJoran" target="_blank" rel="noopener">GitHub →</a>
-    </p>
+    <p class="eyebrow">个人企划看板 · 持续更新中</p>
+    <h1 class="manifesto"><span class="m-pre">From SPM to CPM:</span> <span class="m-ipm">IPM</span></h1>
+    <p class="m-cn">从理想中的空间规划者，到现实中的产品企划者。</p>
+    <p class="m-small">探索自己的方向，把想法做成可以体验的产品。</p>
+
+    <div class="hero-main">
+      <img class="hero-avatar" src="assets/avatar.jpg" alt="李俊龙的头像" width="140" height="140">
+      <div class="hero-text">
+        <h2 class="hero-name">李俊龙<span class="hero-en">（Joran）</span></h2>
+        <p class="hero-greet">你好，我是李俊龙，重庆大学城乡规划学硕士生。欢迎来到我的<strong>个人企划看板</strong>。</p>
+        <p class="hero-sub">最近，我正把城乡规划学习中积累的<strong>系统拆解、实地调研与方案推演</strong>能力，带入 AI 产品的设计、搭建与评估。</p>
+        <div class="hero-plan">
+          <span class="plan-label">本期企划</span>
+          <p>从身边的<strong>小需求</strong>出发，做些具体、实用的东西，让想法可以被<strong>体验，也能够被验证</strong>。</p>
+        </div>
+        <p class="hero-tags">
+          <span>AI 产品</span><span>Agent 设计</span><span>产品评估</span><span>多模态探索</span><span>Vibe Coding</span>
+        </p>
+        <p class="hero-links">
+          <a class="btn btn-primary" href="#projects">查看项目</a>
+          <a class="btn btn-ghost" href="#contact">联系我</a>
+          <a class="hero-gh" href="https://github.com/LeeJoran" target="_blank" rel="noopener">GitHub →</a>
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- 项目作品 -->
@@ -52,7 +65,7 @@
         <div class="p-body">
           <p class="p-type">Web 应用 · 业务 MVP</p>
           <h3 class="p-name">AI合同审查助手</h3>
-          <p class="p-intro">辅助定位合同中的潜在风险条款，为人工复核提供线索。</p>
+          <p class="p-intro">给合同装个风险雷达，让法务的神经松一松。</p>
           <div class="p-rows">
             <div class="p-row"><span class="p-label">需求起点</span><p>合同条款依赖人工逐条核对，希望先用 AI 做一遍初筛，再由人工复核。</p></div>
             <div class="p-row"><span class="p-label">我的工作</span><p>Agent 框架设计与 Skill 能力拆解；设计召回率、精确率的评估方案，梳理漏检与误报的不同业务代价。</p></div>
@@ -75,7 +88,7 @@
         <div class="p-body">
           <p class="p-type">桌面工具 · 可运行</p>
           <h3 class="p-name">随心记Sticky-note</h3>
-          <p class="p-intro">为碎片信息提供随手记录的入口，让想法及时留下来。</p>
+          <p class="p-intro">注意！脑机接口 Demo：一开口，把 Idea 载入电脑。</p>
           <div class="p-rows">
             <div class="p-row"><span class="p-label">需求起点</span><p>想法稍纵即逝，希望桌面上有一个常驻、打开就能记的工具。</p></div>
             <div class="p-row"><span class="p-label">我的工作</span><p>独立完成需求梳理、界面与功能开发，集成语音输入链路。</p></div>
@@ -98,7 +111,7 @@
         <div class="p-body">
           <p class="p-type">桌面工具 · 可运行</p>
           <h3 class="p-name">Week-planner</h3>
-          <p class="p-intro">按周整理任务，让安排更容易查看和维护。</p>
+          <p class="p-intro">给一周装个生活导航，让日子少一点手忙脚乱。</p>
           <div class="p-rows">
             <div class="p-row"><span class="p-label">需求起点</span><p>待办散落在脑子里，希望以「一周」为单位把安排集中起来。</p></div>
             <div class="p-row"><span class="p-label">我的工作</span><p>独立完成需求梳理、界面与功能开发，集成语音录入。</p></div>
@@ -121,7 +134,7 @@
         <div class="p-body">
           <p class="p-type">Web Demo · 可运行</p>
           <h3 class="p-name">Joran’s Pomodoro</h3>
-          <p class="p-intro">在浏览器里开始一段专注，让工作与休息有清晰的节奏。</p>
+          <p class="p-intro">给时间装上呼吸，让每一段专注都有自己的节奏。</p>
           <div class="p-rows">
             <div class="p-row"><span class="p-label">需求起点</span><p>想有一个无需安装、打开浏览器就能用的番茄钟。</p></div>
             <div class="p-row"><span class="p-label">我的工作</span><p>独立开发的第一个 Web Demo：界面、计时逻辑与状态切换。</p></div>
@@ -145,13 +158,12 @@
   <!-- 转型故事与实践 -->
   <section class="section" id="story">
     <h2 class="sec-title">从建筑老八校到 AI 产品，是什么引导着我？</h2>
-    <p class="story-intro">重庆大学是传统上被称为「建筑老八校」的高校之一。我在这里完成城乡规划本科，目前继续攻读城乡规划硕士——我的专业是城乡规划，不是建筑学。</p>
+    <p class="story-intro">重庆大学是传统上被称为「建筑老八校」的高校之一。我在这里完成城乡规划本科，目前继续攻读城乡规划硕士。</p>
 
     <div class="story-block">
       <p class="kicker">01 · 萌芽</p>
       <h3>我与 AI 的故事，萌芽于一个真实问题</h3>
-      <p>2025 年，在准备清华大学 IFoU 国际城市论坛的过程中，面对城乡规划中的现实议题，我开始思考：面对多方诉求与复杂约束，能否借助 Agent 与沙盒模拟，帮助我们观察不同决策可能带来的影响？</p>
-      <p>这段探索让我开始关注智能系统，也让我希望用结构化分析、证据与可验证的假设，进一步理解问题、尝试解决问题。由此，我逐渐萌生了向 AI 产品方向发展的想法。</p>
+      <p>2025 年，在准备清华大学 IFoU 国际城市论坛的过程中，面对城乡规划中多方博弈的现实问题，我开始关注 Agent、仿真与沙盒模拟。我想知道，这些技术能否帮助我们理解不同角色的诉求，以及不同决策可能带来的影响。这个问题，成为我走向 AI 产品探索的起点。</p>
     </div>
 
     <div class="story-block">
@@ -164,8 +176,45 @@
     <div class="story-block">
       <p class="kicker">03 · 方式</p>
       <h3>感性发现问题，理性推进解决</h3>
-      <p>生活中，我容易留意人与环境之间细微的感受；工作中，我习惯建立结构、明确优先级，再把想法转化为具体行动。感性帮助我发现值得关注的问题，理性帮助我拆解问题，原型与反馈则帮助我不断修正判断。</p>
-      <aside class="side-note">个人侧记：生活中偏 INFJ——习惯留意细微的感受；工作中偏 ENTJ——习惯定结构、排优先级、推动落地。这只是自我观察的一种方式，不是能力证明。有想法就动手，用可体验的原型尽早获得反馈。</aside>
+      <aside class="side-note">
+        <p>生活里，我习惯先感受，再理解。</p>
+        <p>工作中，我喜欢把模糊的问题理清，让想法一步步落地。</p>
+        <p>在感性感知与理性分析之间，持续认识自己，也寻找适合自己的节奏。</p>
+        <div class="side-chars">
+          <figure class="char-item">
+            <svg viewBox="0 0 120 120" role="img" aria-label="INFJ：安静观察、记录灵感">
+              <circle cx="60" cy="60" r="56" fill="#eef4fb"/>
+              <rect x="42" y="68" width="36" height="30" rx="13" fill="#0d3b66"/>
+              <circle cx="60" cy="50" r="15" fill="#0d3b66"/>
+              <circle cx="55" cy="49" r="1.8" fill="#ffffff"/>
+              <circle cx="65" cy="49" r="1.8" fill="#ffffff"/>
+              <g transform="rotate(-8 82 66)">
+                <rect x="72" y="58" width="20" height="16" rx="3" fill="#ffffff" stroke="#dfe8f2" stroke-width="1.5"/>
+                <line x1="76" y1="63" x2="88" y2="63" stroke="#c3d3e4" stroke-width="1.8" stroke-linecap="round"/>
+                <line x1="76" y1="68" x2="85" y2="68" stroke="#c3d3e4" stroke-width="1.8" stroke-linecap="round"/>
+              </g>
+              <line x1="72" y1="86" x2="79" y2="72" stroke="#1d6fd6" stroke-width="3" stroke-linecap="round"/>
+              <path d="M92 34 l2.6 5.8 L100 42.4 l-5.4 2.6 L92 50.8 l-2.6 -5.8 L84 42.4 l5.4 -2.6 z" fill="#1d6fd6"/>
+            </svg>
+            <figcaption>生活中的我 · INFJ</figcaption>
+          </figure>
+          <figure class="char-item">
+            <svg viewBox="0 0 120 120" role="img" aria-label="ENTJ：梳理思路、推进计划">
+              <circle cx="60" cy="60" r="56" fill="#eef4fb"/>
+              <rect x="48" y="66" width="24" height="32" rx="11" fill="#0d3b66"/>
+              <circle cx="60" cy="48" r="15" fill="#0d3b66"/>
+              <circle cx="55" cy="46" r="1.8" fill="#ffffff"/>
+              <circle cx="65" cy="46" r="1.8" fill="#ffffff"/>
+              <rect x="76" y="46" width="24" height="30" rx="4" fill="#ffffff" stroke="#dfe8f2" stroke-width="1.5"/>
+              <path d="M81 60 l3.5 3.5 L93 55" fill="none" stroke="#1d6fd6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="81" y1="68" x2="95" y2="68" stroke="#c3d3e4" stroke-width="1.8" stroke-linecap="round"/>
+              <rect x="66" y="72" width="12" height="6" rx="3" fill="#0d3b66"/>
+              <path d="M24 88 h20 m-6 -5 l6 5 l-6 5" fill="none" stroke="#1d6fd6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <figcaption>工作中的我 · ENTJ</figcaption>
+          </figure>
+        </div>
+      </aside>
     </div>
 
     <h3 class="sub-title">为什么选择 AI 产品：用实践支撑动机</h3>
@@ -179,8 +228,8 @@
         <p>围绕自己的日常需求，我使用 Cursor、Claude Code、Codex 等工具开展 Vibe Coding，搭建番茄钟、录音助手等 Web Demo，让想法进入可操作、可体验的阶段。</p>
       </div>
       <div class="card">
-        <h3>关注可用性与验证</h3>
-        <p>我关注产品解决了什么问题，也关注它何时有效、何时会出错，以及用户如何理解和处理这些结果。在合同审查助手中，我设计召回率、精确率的评估方案，梳理漏检与误报的不同业务代价。</p>
+        <h3>在尝试中校准方向</h3>
+        <p>做产品时，我关心一个想法是否真正有用；面对生活，我也愿意先迈出一小步，再从真实的体验中调整方向。保留直觉与好奇，也给判断留下被修正的空间。在尝试、观察和调整中，逐渐找到适合自己的方法与节奏。</p>
       </div>
     </div>
 
@@ -201,56 +250,6 @@
       <div class="tl-item">
         <p class="tl-time">2028</p>
         <h3>预计硕士毕业</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- 图像记录 -->
-  <section class="section gallery" id="gallery">
-    <h2 class="sec-title">图像记录</h2>
-    <p class="sec-lede">从规划设计图纸到现场照片——城乡规划训练留下的视觉痕迹。</p>
-
-    <p class="g-label">规划作品</p>
-    <div class="marquee">
-      <div class="marquee-track">
-        <img src="assets/works/work-01.jpg" alt="规划作品 1" loading="lazy">
-        <img src="assets/works/work-02.jpg" alt="规划作品 2" loading="lazy">
-        <img src="assets/works/work-03.jpg" alt="规划作品 3" loading="lazy">
-        <img src="assets/works/work-04.jpg" alt="规划作品 4" loading="lazy">
-        <img src="assets/works/work-05.jpg" alt="规划作品 5" loading="lazy">
-        <img src="assets/works/work-06.jpg" alt="规划作品 6" loading="lazy">
-        <img src="assets/works/work-07.jpg" alt="规划作品 7" loading="lazy">
-        <img src="assets/works/work-08.jpg" alt="规划作品 8" loading="lazy">
-        <img src="assets/works/work-01.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/works/work-02.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/works/work-03.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/works/work-04.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/works/work-05.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/works/work-06.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/works/work-07.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/works/work-08.jpg" alt="" aria-hidden="true" loading="lazy">
-      </div>
-    </div>
-
-    <p class="g-label">照片</p>
-    <div class="marquee marquee--photos reverse">
-      <div class="marquee-track">
-        <img src="assets/photos/photo-01.jpg" alt="照片 1" loading="lazy">
-        <img src="assets/photos/photo-02.jpg" alt="照片 2" loading="lazy">
-        <img src="assets/photos/photo-03.jpg" alt="照片 3" loading="lazy">
-        <img src="assets/photos/photo-04.jpg" alt="照片 4" loading="lazy">
-        <img src="assets/photos/photo-05.jpg" alt="照片 5" loading="lazy">
-        <img src="assets/photos/photo-06.jpg" alt="照片 6" loading="lazy">
-        <img src="assets/photos/photo-07.jpg" alt="照片 7" loading="lazy">
-        <img src="assets/photos/photo-08.jpg" alt="照片 8" loading="lazy">
-        <img src="assets/photos/photo-01.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/photos/photo-02.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/photos/photo-03.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/photos/photo-04.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/photos/photo-05.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/photos/photo-06.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/photos/photo-07.jpg" alt="" aria-hidden="true" loading="lazy">
-        <img src="assets/photos/photo-08.jpg" alt="" aria-hidden="true" loading="lazy">
       </div>
     </div>
   </section>
@@ -340,9 +339,33 @@
     <p class="contact-line">GitHub：<a href="https://github.com/LeeJoran" target="_blank" rel="noopener">github.com/LeeJoran</a></p>
   </section>
 
+  <!-- 图像记录（收尾氛围带） -->
+  <section class="gallery-band" id="gallery" aria-label="图像记录">
+    <p class="g-title">图像记录</p>
+    <div class="g-strip">
+      <img src="assets/works/work-01.jpg" alt="规划作品 1" loading="lazy">
+      <img src="assets/photos/photo-01.jpg" alt="照片 1" loading="lazy">
+      <img src="assets/works/work-02.jpg" alt="规划作品 2" loading="lazy">
+      <img src="assets/photos/photo-02.jpg" alt="照片 2" loading="lazy">
+      <img src="assets/works/work-03.jpg" alt="规划作品 3" loading="lazy">
+      <img src="assets/photos/photo-03.jpg" alt="照片 3" loading="lazy">
+      <img src="assets/works/work-04.jpg" alt="规划作品 4" loading="lazy">
+      <img src="assets/photos/photo-04.jpg" alt="照片 4" loading="lazy">
+      <img src="assets/works/work-05.jpg" alt="规划作品 5" loading="lazy">
+      <img src="assets/photos/photo-05.jpg" alt="照片 5" loading="lazy">
+      <img src="assets/works/work-06.jpg" alt="规划作品 6" loading="lazy">
+      <img src="assets/photos/photo-06.jpg" alt="照片 6" loading="lazy">
+      <img src="assets/works/work-07.jpg" alt="规划作品 7" loading="lazy">
+      <img src="assets/photos/photo-07.jpg" alt="照片 7" loading="lazy">
+      <img src="assets/works/work-08.jpg" alt="规划作品 8" loading="lazy">
+      <img src="assets/photos/photo-08.jpg" alt="照片 8" loading="lazy">
+    </div>
+  </section>
+
   <footer class="footer">
     <p>© 2026 李俊龙（Joran）· AI 产品方向作品集</p>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>
