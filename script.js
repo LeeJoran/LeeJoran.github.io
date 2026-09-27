@@ -12,12 +12,12 @@
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
   var W = 0, H = 0;
   var particles = [];
-  var MAX = 140;
+  var MAX = 260;
   var rafId = null;
   var lastX = -1, lastY = -1;
 
-  // 低饱和浅蓝、蓝灰
-  var COLORS = ['29,111,214', '122,167,216', '159,179,200', '185,204,221'];
+  // 低饱和浅蓝、蓝灰（主色权重更高，更清晰）
+  var COLORS = ['29,111,214', '29,111,214', '122,167,216', '159,179,200'];
 
   function resize() {
     W = window.innerWidth;
@@ -33,24 +33,25 @@
 
   function spawn(x, y) {
     if (particles.length >= MAX) {
-      particles.splice(0, particles.length - MAX + 2);
+      particles.splice(0, particles.length - MAX + 4);
     }
     particles.push({
-      x: x + (Math.random() - .5) * 10,
-      y: y + (Math.random() - .5) * 10,
-      r: 1.2 + Math.random() * 2.4,
-      a: .2 + Math.random() * .25,
+      x: x + (Math.random() - .5) * 8,
+      y: y + (Math.random() - .5) * 8,
+      r: 1.6 + Math.random() * 2.6,
+      a: .28 + Math.random() * .27,
       c: COLORS[(Math.random() * COLORS.length) | 0],
       vx: (Math.random() - .5) * .18,
       vy: (Math.random() - .5) * .18 - .06
     });
   }
 
-  // 鼠标移动时生成；静止或离开页面即停止生成
+  // 鼠标移动时生成（每次 2 颗，围绕光标）；静止或离开页面即停止生成
   window.addEventListener('mousemove', function (e) {
-    if (Math.abs(e.clientX - lastX) + Math.abs(e.clientY - lastY) < 10) return;
+    if (Math.abs(e.clientX - lastX) + Math.abs(e.clientY - lastY) < 6) return;
     lastX = e.clientX;
     lastY = e.clientY;
+    spawn(e.clientX, e.clientY);
     spawn(e.clientX, e.clientY);
   }, { passive: true });
 
@@ -59,7 +60,7 @@
     ctx.clearRect(0, 0, W, H);
     for (var i = particles.length - 1; i >= 0; i--) {
       var p = particles[i];
-      p.a -= 0.012;
+      p.a -= 0.009;
       if (p.a <= 0) {
         particles.splice(i, 1);
         continue;
