@@ -224,24 +224,12 @@ a:hover { text-decoration: underline; }
   padding-top: 10px;
 }
 .stack-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 3px; }
-/* 主卡：技术栈横向传导，芯片间带 → 箭头 */
-.p-main .stack-tags .tech-tag:not(:last-child)::after {
+/* 技术栈统一横向传导，芯片间带 → 箭头 */
+.stack-tags .tech-tag:not(:last-child)::after {
   content: "→";
   margin-left: 8px;
   color: var(--accent);
   font-family: var(--mono);
-}
-/* 副卡：技术栈竖向传导，芯片通宽居中，芯片间带 ↓ 箭头 */
-.p-minor .stack-tags { flex-direction: column; flex-wrap: nowrap; gap: 6px; }
-.p-minor .stack-tags .tech-tag { text-align: center; }
-.p-minor .stack-tags .tech-tag:not(:last-child)::after {
-  content: "↓";
-  display: block;
-  margin-top: 4px;
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 12px;
-  line-height: 1;
 }
 .tech-tag {
   font-family: var(--mono); font-size: 12px;
