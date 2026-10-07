@@ -65,21 +65,30 @@ a:hover { text-decoration: underline; }
   margin-bottom: 16px;
 }
 .eyebrow::before { content: "$ "; }
+.m-line {
+  display: flex; align-items: baseline; flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-bottom: 14px;
+}
 .manifesto {
   font-size: clamp(36px, 6.8vw, 62px);
   font-weight: 800; color: var(--brand);
   letter-spacing: -.02em; line-height: 1.2;
-  margin-bottom: 14px;
 }
 .m-pre { color: var(--brand); font-weight: 700; }
 .m-ipm { color: var(--accent); }
 .m-legend {
-  display: flex; flex-direction: column; gap: 6px;
-  font-family: var(--mono); font-size: 13px;
+  display: flex; flex-wrap: wrap; gap: 8px;
+  font-family: var(--mono); font-size: 12.5px;
   color: var(--ink-soft);
-  margin-bottom: 14px;
 }
-.m-legend span::before { content: "· "; color: var(--accent); }
+.m-legend span {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
 .m-legend strong { color: var(--brand); font-weight: 700; }
 .m-cn {
   font-size: clamp(17px, 2.2vw, 21px);
@@ -212,6 +221,9 @@ a:hover { text-decoration: underline; }
   padding-top: 10px;
 }
 .stack-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 3px; }
+/* 副卡：技术栈竖向排列，芯片通宽居中 */
+.p-minor .stack-tags { flex-direction: column; flex-wrap: nowrap; }
+.p-minor .stack-tags .tech-tag { text-align: center; }
 .tech-tag {
   font-family: var(--mono); font-size: 12px;
   color: var(--brand); background: var(--bg-alt);
