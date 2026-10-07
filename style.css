@@ -175,14 +175,14 @@ a:hover { text-decoration: underline; }
 .sec-lede { color: var(--ink-soft); font-size: 15.5px; margin-bottom: 30px; }
 .sub-title { font-size: 20px; color: var(--brand); margin: 48px 0 18px; }
 
-/* ---------- 项目卡片（2 主卡整行 + 3 副卡一行） ---------- */
+/* ---------- 项目卡片（3 主卡整行 + 2 副卡一行） ---------- */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 28px;
 }
 .p-main { grid-column: span 6; }
-.p-minor { grid-column: span 2; }
+.p-minor { grid-column: span 3; }
 .p-card {
   background: var(--bg);
   border: 1px solid var(--line);
@@ -446,11 +446,6 @@ a:hover { text-decoration: underline; }
   text-align: center;
   color: var(--ink-soft); font-size: 13.5px;
   font-family: var(--mono);
-}
-
-/* ---------- 平板：副卡两列 ---------- */
-@media (max-width: 900px) {
-  .p-minor { grid-column: span 3; }
 }
 
 /* ---------- 移动端 ---------- */
