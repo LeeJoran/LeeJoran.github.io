@@ -46,8 +46,8 @@
         </p>
         <p class="hero-links">
           <a class="btn btn-primary" href="#projects">查看项目</a>
-          <a class="btn btn-ghost" href="#contact">联系我</a>
-          <a class="hero-gh" href="https://github.com/LeeJoran" target="_blank" rel="noopener">GitHub →</a>
+          <a class="btn btn-primary" href="#contact">联系我</a>
+          <a class="btn btn-primary" href="https://github.com/LeeJoran" target="_blank" rel="noopener">GitHub ↗</a>
         </p>
       </div>
       <img class="hero-avatar" src="assets/avatar.jpg" alt="李俊龙的头像" width="150" height="150">
@@ -57,12 +57,32 @@
   <!-- 项目作品 -->
   <section class="section" id="projects">
     <h2 class="sec-title">项目作品</h2>
-    <p class="sec-lede">四个项目，一条成长线：从第一个 Web Demo，到桌面工具，再到业务 MVP。</p>
+    <p class="sec-lede">五个项目，一条成长线：从第一个 Web Demo，到桌面工具，再到业务 MVP 与全栈 H5 应用。</p>
 
     <div class="project-grid">
 
-      <!-- 项目 1：AI合同审查助手 -->
-      <article class="p-card">
+      <!-- 项目 1：流浪星球 Wandering Planet -->
+      <article class="p-card p-main">
+        <div class="p-body">
+          <p class="p-type">全栈 H5 应用 · 已上线</p>
+          <h3 class="p-name">流浪星球 Wandering Planet</h3>
+          <p class="p-intro">把一起度过的时间，变成看得见的星。</p>
+          <div class="p-rows">
+            <div class="p-row"><span class="p-label">需求起点</span><p>相处的时间不该只留在聊天记录里——希望有一款陪伴型应用，让「在一起」可以被看见、被收藏。</p></div>
+            <div class="p-row"><span class="p-label">我的工作</span><p>独立完成从产品定义到实现：单人「我的天空」与多人「共赴」两套玩法、星座数据与能量系统、Vue 界面与 Supabase 后端。</p></div>
+            <div class="p-row"><span class="p-label">关键设计</span><p>免登录 6 位邀请码共赴；三层架构（core 纯业务 / platform 接口 / ui 可替换）为小程序迁移留口子；关闭页面不丢进度，下次打开自动结算。</p></div>
+          </div>
+          <div class="p-row p-stack"><span class="p-label">技术栈</span><div class="stack-tags"><span class="tech-tag">Vue 3</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Vite</span><span class="tech-tag">Supabase</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Realtime</span></div></div>
+          <div class="p-foot">
+            <p class="p-status"><span class="dot dot-ok"></span>已上线 · 线上可体验</p>
+            <a class="card-link" href="https://leejoran.github.io/wandering-planet/" target="_blank" rel="noopener">在线体验 ↗</a>
+            <a class="card-link" href="https://github.com/LeeJoran/wandering-planet" target="_blank" rel="noopener">查看源码 ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 项目 2：AI合同审查助手 -->
+      <article class="p-card p-main">
         <div class="p-body">
           <p class="p-type">Web 应用 · 业务 MVP</p>
           <h3 class="p-name">AI合同审查助手</h3>
@@ -72,11 +92,7 @@
             <div class="p-row"><span class="p-label">我的工作</span><p>Agent 框架设计与 Skill 能力拆解；设计召回率、精确率的评估方案，梳理漏检与误报的不同业务代价。</p></div>
             <div class="p-row"><span class="p-label">关键设计</span><p>审查结果按「风险 / 条款要点 / 建议」组织呈现，并始终保留原始输出，方便人工复核。</p></div>
           </div>
-          <details class="p-more">
-            <summary>过程与反思</summary>
-            <p>支持 PDF / DOCX 上传，提供严格、快速两种审查模式；工作流出参尚未锁定，适配层按「风险 / 条款 / 建议」尽力映射并保留原始输出。漏检意味着风险被放过，误报意味着复核者反复打开没有问题的条款——两者的代价不同，评估设计需要为这种业务权衡留出空间。</p>
-          </details>
-          <p class="tech-row"><span class="tech-tag">TypeScript</span><span class="tech-tag">Next.js</span><span class="tech-tag">Coze 工作流</span></p>
+          <div class="p-row p-stack"><span class="p-label">技术栈</span><div class="stack-tags"><span class="tech-tag">Next.js</span><span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">shadcn/ui</span><span class="tech-tag">Coze 工作流</span></div></div>
           <div class="p-foot">
             <p class="p-status"><span class="dot dot-dev"></span>MVP 开发中 · 本地运行</p>
             <a class="card-link" href="https://github.com/LeeJoran/audit-contract" target="_blank" rel="noopener">查看源码 ↗</a>
@@ -84,8 +100,8 @@
         </div>
       </article>
 
-      <!-- 项目 2：随心记Sticky-note -->
-      <article class="p-card">
+      <!-- 项目 3：随心记Sticky-note -->
+      <article class="p-card p-minor">
         <div class="p-body">
           <p class="p-type">桌面工具 · 可运行</p>
           <h3 class="p-name">随心记Sticky-note</h3>
@@ -95,11 +111,7 @@
             <div class="p-row"><span class="p-label">我的工作</span><p>独立完成需求梳理、界面与功能开发，集成语音输入链路。</p></div>
             <div class="p-row"><span class="p-label">关键设计</span><p>缩短「想到 → 记下」的路径：便签常驻桌面与系统托盘，语音输入在腾不出手的场景里补位。</p></div>
           </div>
-          <details class="p-more">
-            <summary>过程与反思</summary>
-            <p>支持富文本、图片、语音与导出。语音输入适合「手在忙、想法来了」的时刻——它不替代键盘，而是补上另一种输入路径。一个记录工具的好坏，首先取决于打开它到写完第一条要花几秒。</p>
-          </details>
-          <p class="tech-row"><span class="tech-tag">Python</span><span class="tech-tag">tkinter</span><span class="tech-tag">语音输入</span></p>
+          <div class="p-row p-stack"><span class="p-label">技术栈</span><div class="stack-tags"><span class="tech-tag">Python</span><span class="tech-tag">tkinter</span><span class="tech-tag">SpeechRecognition</span><span class="tech-tag">sounddevice</span><span class="tech-tag">pystray</span><span class="tech-tag">Pillow</span><span class="tech-tag">python-docx</span><span class="tech-tag">reportlab</span></div></div>
           <div class="p-foot">
             <p class="p-status"><span class="dot dot-ok"></span>本地可运行</p>
             <a class="card-link" href="https://github.com/LeeJoran/sticky-note" target="_blank" rel="noopener">查看源码 ↗</a>
@@ -107,8 +119,8 @@
         </div>
       </article>
 
-      <!-- 项目 3：Week-planner -->
-      <article class="p-card">
+      <!-- 项目 4：Week-planner -->
+      <article class="p-card p-minor">
         <div class="p-body">
           <p class="p-type">桌面工具 · 可运行</p>
           <h3 class="p-name">Week-planner</h3>
@@ -118,11 +130,7 @@
             <div class="p-row"><span class="p-label">我的工作</span><p>独立完成需求梳理、界面与功能开发，集成语音录入。</p></div>
             <div class="p-row"><span class="p-label">关键设计</span><p>以周为单位的单一视图：新增、查看、调整都围绕同一份信息，不需要来回切换。</p></div>
           </div>
-          <details class="p-more">
-            <summary>过程与反思</summary>
-            <p>与随心记的分工：随心记捕捉「当下冒出来的碎片」，Week-planner 负责「按周组织安排」——一个即时，一个按周期。计划工具最难的不是录入，而是让人愿意回来看第二眼。</p>
-          </details>
-          <p class="tech-row"><span class="tech-tag">Python</span><span class="tech-tag">tkinter</span><span class="tech-tag">语音录入</span></p>
+          <div class="p-row p-stack"><span class="p-label">技术栈</span><div class="stack-tags"><span class="tech-tag">Python</span><span class="tech-tag">tkinter</span><span class="tech-tag">SpeechRecognition</span><span class="tech-tag">sounddevice</span></div></div>
           <div class="p-foot">
             <p class="p-status"><span class="dot dot-ok"></span>本地可运行</p>
             <a class="card-link" href="https://github.com/LeeJoran/week-planner" target="_blank" rel="noopener">查看源码 ↗</a>
@@ -130,8 +138,8 @@
         </div>
       </article>
 
-      <!-- 项目 4：Joran's Pomodoro -->
-      <article class="p-card">
+      <!-- 项目 5：Joran's Pomodoro -->
+      <article class="p-card p-minor">
         <div class="p-body">
           <p class="p-type">Web Demo · 可运行</p>
           <h3 class="p-name">Joran’s Pomodoro</h3>
@@ -141,11 +149,7 @@
             <div class="p-row"><span class="p-label">我的工作</span><p>独立开发的第一个 Web Demo：界面、计时逻辑与状态切换。</p></div>
             <div class="p-row"><span class="p-label">关键设计</span><p>从一个小而明确的需求出发，把「专注 → 休息」的状态切换做完整，让原型真正可用。</p></div>
           </div>
-          <details class="p-more">
-            <summary>过程与反思</summary>
-            <p>这是我系统学习 Web 开发后的第一件作品——先跑起来，再迭代。之后做桌面工具和全栈项目时的很多判断，都从这里开始。番茄钟的功能边界很清晰，清晰到刚好适合练手。</p>
-          </details>
-          <p class="tech-row"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></p>
+          <div class="p-row p-stack"><span class="p-label">技术栈</span><div class="stack-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div></div>
           <div class="p-foot">
             <p class="p-status"><span class="dot dot-ok"></span>可运行 Demo</p>
             <a class="card-link" href="https://github.com/LeeJoran/pomodoro" target="_blank" rel="noopener">查看源码 ↗</a>
