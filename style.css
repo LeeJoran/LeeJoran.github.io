@@ -66,8 +66,8 @@ a:hover { text-decoration: underline; }
 }
 .eyebrow::before { content: "$ "; }
 .m-line {
-  display: flex; align-items: baseline; flex-wrap: wrap;
-  gap: 8px 16px;
+  display: flex; align-items: center; flex-wrap: nowrap;
+  gap: 18px;
   margin-bottom: 14px;
 }
 .manifesto {
@@ -77,17 +77,20 @@ a:hover { text-decoration: underline; }
 }
 .m-pre { color: var(--brand); font-weight: 700; }
 .m-ipm { color: var(--accent); }
+/* 三个缩写标签：紧跟标题同行，竖向堆叠，总高度与标题基本一致 */
 .m-legend {
-  display: flex; flex-wrap: wrap; gap: 8px;
-  font-family: var(--mono); font-size: 12.5px;
+  display: flex; flex-direction: column; gap: 3px;
+  font-family: var(--mono); font-size: 12px;
   color: var(--ink-soft);
 }
 .m-legend span {
   background: var(--bg-alt);
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 4px 12px;
+  padding: 2px 12px;
+  line-height: 1.4;
   white-space: nowrap;
+  text-align: center;
 }
 .m-legend strong { color: var(--brand); font-weight: 700; }
 .m-cn {
@@ -221,9 +224,25 @@ a:hover { text-decoration: underline; }
   padding-top: 10px;
 }
 .stack-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 3px; }
-/* 副卡：技术栈竖向排列，芯片通宽居中 */
-.p-minor .stack-tags { flex-direction: column; flex-wrap: nowrap; }
+/* 主卡：技术栈横向传导，芯片间带 → 箭头 */
+.p-main .stack-tags .tech-tag:not(:last-child)::after {
+  content: "→";
+  margin-left: 8px;
+  color: var(--accent);
+  font-family: var(--mono);
+}
+/* 副卡：技术栈竖向传导，芯片通宽居中，芯片间带 ↓ 箭头 */
+.p-minor .stack-tags { flex-direction: column; flex-wrap: nowrap; gap: 6px; }
 .p-minor .stack-tags .tech-tag { text-align: center; }
+.p-minor .stack-tags .tech-tag:not(:last-child)::after {
+  content: "↓";
+  display: block;
+  margin-top: 4px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1;
+}
 .tech-tag {
   font-family: var(--mono); font-size: 12px;
   color: var(--brand); background: var(--bg-alt);
@@ -440,6 +459,7 @@ a:hover { text-decoration: underline; }
   .hero { padding: 40px 20px 40px; }
   .hero-main { flex-direction: column; gap: 20px; }
   .hero-avatar { width: 120px; height: 120px; border-radius: 14px; }
+  .m-line { flex-wrap: wrap; }
   .section { padding: 48px 20px; }
   .project-grid { grid-template-columns: 1fr; }
   .p-main, .p-minor { grid-column: auto; }
